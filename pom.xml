@@ -13,22 +13,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>AccountService</name>
 	<description>Demo microservice for user accounts</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
-		<java.version>21.0.4</java.version>
+		<java.version>1.8</java.version> <!-- Use Java 8 -->
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -47,6 +36,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version> <!-- This version is compatible with Java 8 -->
+				<configuration>
+					<source>1.8</source> <!-- Java 8 source compatibility -->
+					<target>1.8</target> <!-- Java 8 target compatibility -->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
